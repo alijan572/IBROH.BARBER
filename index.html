@@ -45,26 +45,6 @@
             -webkit-overflow-scrolling: touch;
         }
         
-        /* iOS Dynamic Island Style Status */
-        .ios-status {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: max(44px, var(--safe-top));
-            z-index: 99999;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            padding: 0 25px 8px;
-            font-size: 14px;
-            font-weight: 600;
-            pointer-events: none;
-            transition: opacity 0.3s;
-        }
-        .ios-status.hidden { opacity: 0; }
-        
-        /* iOS Home Indicator */
         .ios-home-indicator {
             position: fixed;
             bottom: 8px;
@@ -79,7 +59,6 @@
         }
         .ios-home-indicator.hidden { opacity: 0; }
         
-        /* Liquid Glass Background */
         .liquid-bg {
             position: fixed;
             top: 0;
@@ -100,7 +79,6 @@
             66% { transform: scale(0.98) rotate(-1deg); }
         }
         
-        /* Mesh Gradient Overlay */
         .mesh-gradient {
             position: fixed;
             top: 0;
@@ -124,7 +102,6 @@
             75% { transform: translate(2%, -2%) scale(1.05); }
         }
         
-        /* iOS Glass Card */
         .ios-glass {
             background: var(--ios-glass);
             backdrop-filter: var(--ios-blur);
@@ -165,7 +142,6 @@
             background: rgba(255,255,255,0.05);
         }
         
-        /* iOS Button */
         .ios-btn {
             background: linear-gradient(135deg, var(--ios-gold), var(--ios-gold-light));
             color: #000;
@@ -196,7 +172,6 @@
         .ios-btn:hover::before { left: 100%; }
         .ios-btn:active { transform: scale(0.96); box-shadow: 0 2px 10px rgba(212,175,55,0.2); }
         
-        /* iOS Large Button */
         .ios-btn-large {
             width: 100%;
             padding: 18px;
@@ -204,7 +179,6 @@
             justify-content: center;
         }
         
-        /* Progress Bar iOS Style */
         .ios-progress {
             position: fixed;
             top: 0;
@@ -217,7 +191,6 @@
             box-shadow: 0 0 10px var(--ios-gold-glow);
         }
         
-        /* Hero Section iOS */
         .ios-hero {
             position: relative;
             min-height: 100dvh;
@@ -308,7 +281,6 @@
         }
         .ios-hero-btn-secondary:active { transform: scale(0.96); background: rgba(255,255,255,0.12); }
         
-        /* iOS Section */
         .ios-section {
             padding: 60px 20px;
             position: relative;
@@ -325,7 +297,6 @@
             letter-spacing: -0.01em;
         }
         
-        /* iOS Cards Horizontal Scroll */
         .ios-scroll-container {
             display: flex;
             gap: 16px;
@@ -343,7 +314,6 @@
             scroll-snap-align: center;
         }
         
-        /* iOS Stat Card */
         .ios-stat-card {
             padding: 28px 20px;
             text-align: center;
@@ -364,7 +334,6 @@
             font-weight: 500;
         }
         
-        /* iOS Service Card */
         .ios-service-card {
             padding: 24px;
             display: flex;
@@ -401,7 +370,6 @@
             padding-top: 12px;
         }
         
-        /* iOS Gallery */
         .ios-gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -424,24 +392,7 @@
         }
         .ios-gallery-item:active { transform: scale(0.95); }
         .ios-gallery-item:active img { transform: scale(1.1); }
-        .ios-gallery-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.7) 100%);
-            display: flex;
-            align-items: flex-end;
-            padding: 16px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .ios-gallery-item:hover .ios-gallery-overlay { opacity: 1; }
-        .ios-gallery-tag {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--ios-gold);
-        }
         
-        /* iOS Master Card */
         .ios-master-card {
             padding: 32px 24px;
             text-align: center;
@@ -496,7 +447,6 @@
             border: 1px solid rgba(212,175,55,0.2);
         }
         
-        /* iOS Testimonial */
         .ios-testimonial {
             padding: 28px;
         }
@@ -533,8 +483,12 @@
             color: var(--ios-gold);
             font-size: 13px;
         }
+        .review-date {
+            font-size: 12px;
+            color: rgba(255,255,255,0.4);
+            margin-top: 4px;
+        }
         
-        /* iOS Contact Card */
         .ios-contact-row {
             display: flex;
             align-items: center;
@@ -573,7 +527,6 @@
             text-decoration: none;
         }
         
-        /* iOS Map */
         .ios-map {
             height: 280px;
             border-radius: var(--ios-radius);
@@ -588,7 +541,6 @@
             filter: invert(0.9) hue-rotate(180deg) saturate(0.5);
         }
         
-        /* iOS Social Buttons */
         .ios-social-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -616,7 +568,6 @@
         .ios-social-btn.review { background: linear-gradient(135deg, rgba(255,107,53,0.2), rgba(247,180,44,0.1)); color: #ff6b35; }
         .ios-social-btn:active { transform: scale(0.96); }
         
-        /* iOS Hours */
         .ios-hours-item {
             display: flex;
             justify-content: space-between;
@@ -656,33 +607,6 @@
         .ios-status-open { background: rgba(37,211,102,0.15); color: #25D366; border: 1px solid rgba(37,211,102,0.3); }
         .ios-status-closed { background: rgba(255,68,68,0.15); color: #ff4444; border: 1px solid rgba(255,68,68,0.3); }
         
-        /* iOS Bottom Sheet */
-        .ios-bottom-sheet {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--ios-glass);
-            backdrop-filter: var(--ios-blur);
-            -webkit-backdrop-filter: var(--ios-blur);
-            border-radius: var(--ios-radius) var(--ios-radius) 0 0;
-            border: 1px solid var(--ios-glass-border);
-            border-bottom: none;
-            padding: 20px 24px calc(24px + var(--safe-bottom));
-            z-index: 1000;
-            transform: translateY(100%);
-            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-        .ios-bottom-sheet.active { transform: translateY(0); }
-        .ios-bottom-sheet-handle {
-            width: 36px;
-            height: 5px;
-            background: rgba(255,255,255,0.3);
-            border-radius: 100px;
-            margin: 0 auto 20px;
-        }
-        
-        /* iOS Modal */
         .ios-modal {
             display: none;
             position: fixed;
@@ -727,7 +651,6 @@
         }
         .ios-modal-close:active { transform: scale(0.9); background: rgba(255,255,255,0.2); }
         
-        /* iOS Footer */
         .ios-footer {
             text-align: center;
             padding: 40px 20px calc(40px + var(--safe-bottom));
@@ -752,16 +675,12 @@
             font-weight: 500;
         }
         
-        /* Animations */
         @keyframes fadeSlideUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Scrollbar */
         ::-webkit-scrollbar { width: 0; height: 0; }
-        
-        /* Selection */
         ::selection { background: rgba(212,175,55,0.3); color: #fff; }
         
         /* Desktop overrides */
@@ -775,40 +694,115 @@
             }
             .ios-scroll-card { max-width: none; }
             .ios-gallery { grid-template-columns: repeat(4, 1fr); gap: 16px; }
-            .ios-social-grid { grid-template-columns: repeat(4, 1fr); }
+            .ios-social-grid { grid-template-columns: repeat(3, 1fr); }
             .ios-section { padding: 100px 40px; }
             .ios-hero { justify-content: center; padding-bottom: 40px; }
             .ios-hero-title { font-size: 4rem; }
+        }
+
+        /* Realistic Scissors */
+        .scissors-container {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px;
+            animation: scissorsFloat 3s ease-in-out infinite;
+        }
+        @keyframes scissorsFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        .scissors-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 15px rgba(212,175,55,0.3));
+        }
+        .blade-top {
+            transform-origin: 70px 70px;
+            animation: snipTop 0.7s ease-in-out infinite alternate;
+        }
+        @keyframes snipTop {
+            0% { transform: rotate(-20deg); }
+            100% { transform: rotate(5deg); }
+        }
+        .blade-bottom {
+            transform-origin: 70px 70px;
+            animation: snipBottom 0.7s ease-in-out infinite alternate;
+        }
+        @keyframes snipBottom {
+            0% { transform: rotate(20deg); }
+            100% { transform: rotate(-5deg); }
+        }
+        .ring-glow {
+            animation: ringPulse 1.5s ease-in-out infinite;
+        }
+        @keyframes ringPulse {
+            0%, 100% { filter: drop-shadow(0 0 3px rgba(212,175,55,0.3)); }
+            50% { filter: drop-shadow(0 0 12px rgba(212,175,55,0.7)); }
+        }
+        .blade-shine {
+            animation: shineMove 1.5s linear infinite;
+        }
+        @keyframes shineMove {
+            0% { transform: translateX(-20px); opacity: 0; }
+            30% { opacity: 0.8; }
+            70% { opacity: 0.8; }
+            100% { transform: translateX(20px); opacity: 0; }
         }
     </style>
 </head>
 <body>
 
-<!-- iOS Status Bar -->
-<div class="ios-status" id="iosStatus">
-    <span id="clock">9:41</span>
-    <span>
-        <i class="fas fa-signal" style="font-size:12px;"></i>
-        <i class="fas fa-wifi" style="font-size:12px;margin:0 4px;"></i>
-        <i class="fas fa-battery-full" style="font-size:14px;"></i>
-    </span>
-</div>
-
-<!-- Liquid Background -->
 <div class="liquid-bg"></div>
 <div class="mesh-gradient"></div>
-
-<!-- Progress -->
 <div class="ios-progress" id="progressBar"></div>
 
 <!-- HERO -->
 <section class="ios-hero">
     <video id="heroVideo" muted playsinline loop class="ios-hero-video">
         <source src="myvideo.mp4" type="video/mp4">
-        <source src="  " type="video/mp4">
+        <source src="https://cdn.pixabay.com/video/2023/10/31/187641-882598145_large.mp4" type="video/mp4">
     </video>
     <div class="ios-hero-overlay"></div>
     <div class="ios-hero-content">
+        <div class="scissors-container">
+            <svg class="scissors-svg" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#b8960c"/>
+                        <stop offset="50%" stop-color="#d4af37"/>
+                        <stop offset="100%" stop-color="#f0d878"/>
+                    </linearGradient>
+                    <linearGradient id="steelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#e8e8e8"/>
+                        <stop offset="50%" stop-color="#c0c0c0"/>
+                        <stop offset="100%" stop-color="#a0a0a0"/>
+                    </linearGradient>
+                    <linearGradient id="shineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="transparent"/>
+                        <stop offset="50%" stop-color="rgba(255,255,255,0.5)"/>
+                        <stop offset="100%" stop-color="transparent"/>
+                    </linearGradient>
+                </defs>
+                <g class="blade-bottom">
+                    <path d="M70,70 L115,30 L118,33 L70,75 Z" fill="url(#steelGrad)" stroke="#888" stroke-width="0.5"/>
+                    <path d="M70,70 L115,30" stroke="#fff" stroke-width="1.5" opacity="0.6"/>
+                    <path d="M70,70 L48,92 L45,89 L67,67 Z" fill="url(#goldGrad)"/>
+                    <ellipse cx="38" cy="100" rx="14" ry="18" fill="none" stroke="url(#goldGrad)" stroke-width="4" class="ring-glow"/>
+                    <ellipse cx="38" cy="100" rx="9" ry="12" fill="none" stroke="#b8960c" stroke-width="1"/>
+                </g>
+                <g class="blade-top">
+                    <path d="M70,70 L115,110 L118,107 L70,65 Z" fill="url(#steelGrad)" stroke="#888" stroke-width="0.5"/>
+                    <path d="M70,70 L115,110" stroke="#fff" stroke-width="1.5" opacity="0.6"/>
+                    <path d="M70,70 L48,48 L45,51 L67,73 Z" fill="url(#goldGrad)"/>
+                    <ellipse cx="38" cy="40" rx="14" ry="18" fill="none" stroke="url(#goldGrad)" stroke-width="4" class="ring-glow"/>
+                    <ellipse cx="38" cy="40" rx="9" ry="12" fill="none" stroke="#b8960c" stroke-width="1"/>
+                </g>
+                <circle cx="70" cy="70" r="5" fill="url(#goldGrad)" stroke="#b8960c" stroke-width="1"/>
+                <circle cx="70" cy="70" r="2.5" fill="#f0d878"/>
+                <rect x="50" y="68" width="40" height="3" fill="url(#shineGrad)" class="blade-shine" opacity="0.5"/>
+            </svg>
+        </div>
         <div class="ios-hero-badge">
             <i class="fas fa-circle" style="font-size:6px;color:#25D366;"></i>
             Сейчас открыто
@@ -888,19 +882,15 @@
     <div class="ios-gallery" id="gallery">
         <div class="ios-gallery-item" data-img="gallery/barber-01.png">
             <img src="barber-01.png" alt="Работа" onerror="this.src='https://placehold.co/600x600/1a1a1a/d4af37?text=Work+1'">
-            
         </div>
         <div class="ios-gallery-item" data-img="gallery/barber-02.png">
             <img src="barber-02.png" alt="Работа" onerror="this.src='https://placehold.co/600x600/1a1a1a/d4af37?text=Work+2'">
-            
         </div>
         <div class="ios-gallery-item" data-img="gallery/barber-03.png">
             <img src="barber-03.png" alt="Работа" onerror="this.src='https://placehold.co/600x600/1a1a1a/d4af37?text=Work+3'">
-            
         </div>
         <div class="ios-gallery-item" data-img="gallery/barber-04.png">
             <img src="barber-04.png" alt="Работа" onerror="this.src='https://placehold.co/600x600/1a1a1a/d4af37?text=Work+4'">
-            
         </div>
     </div>
 </section>
@@ -920,43 +910,6 @@
             <div class="ios-master-name">Исмаил</div>
             <div class="ios-master-role">Эксперт по бороде</div>
             <div class="ios-master-exp"><i class="fas fa-cut" style="font-size:12px;"></i> 5 лет стажа</div>
-        </div>
-    </div>
-</section>
-
-<!-- Reviews -->
-<section class="ios-section">
-    <h2 class="ios-section-title">Отзывы</h2>
-    <div class="ios-scroll-container">
-        <div class="ios-glass ios-scroll-card ios-testimonial">
-            <div class="ios-testimonial-text">"Лучший барбершоп в Балашихе! Ибрагим сделал идеальный фейд. Атмосфера огонь!"</div>
-            <div class="ios-testimonial-author">
-                <div class="ios-testimonial-avatar">АК</div>
-                <div>
-                    <div class="ios-testimonial-name">Алексей К.</div>
-                    <div class="ios-testimonial-stars">⭐⭐⭐⭐⭐</div>
-                </div>
-            </div>
-        </div>
-        <div class="ios-glass ios-scroll-card ios-testimonial">
-            <div class="ios-testimonial-text">"Хожу к Исмаилу полгода. Борода всегда на высоте, стерильность на уровне."</div>
-            <div class="ios-testimonial-author">
-                <div class="ios-testimonial-avatar">ДМ</div>
-                <div>
-                    <div class="ios-testimonial-name">Дмитрий М.</div>
-                    <div class="ios-testimonial-stars">⭐⭐⭐⭐⭐</div>
-                </div>
-            </div>
-        </div>
-        <div class="ios-glass ios-scroll-card ios-testimonial">
-            <div class="ios-testimonial-text">"Наконец-то нашёл своего барбера! Запись через WhatsApp — мгновенно отвечают."</div>
-            <div class="ios-testimonial-author">
-                <div class="ios-testimonial-avatar">СР</div>
-                <div>
-                    <div class="ios-testimonial-name">Сергей Р.</div>
-                    <div class="ios-testimonial-stars">⭐⭐⭐⭐⭐</div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -1028,9 +981,13 @@
                 <i class="fab fa-instagram"></i>
                 <span>Instagram</span>
             </a>
-            <button class="ios-social-btn review" id="reviewBtn">
+        </div>
+        
+        <!-- Яндекс Карты кнопка "Отзыв" -->
+        <div style="margin-top: 20px; text-align: center;">
+            <button class="ios-social-btn review" id="reviewBtn" style="width:100%; flex-direction:row; justify-content:center; gap:12px;">
                 <i class="fas fa-star"></i>
-                <span>Отзыв</span>
+                <span>Оставить отзыв на Яндекс Картах</span>
             </button>
         </div>
     </div>
@@ -1047,26 +1004,14 @@
     <div style="margin-top:16px;opacity:0.5;">© 2026</div>
 </footer>
 
-<!-- Home Indicator -->
 <div class="ios-home-indicator" id="homeIndicator"></div>
 
-<!-- Modal -->
 <div class="ios-modal" id="modal">
     <img id="modalImg" src="" alt="">
     <div class="ios-modal-close" id="modalClose"><i class="fas fa-times"></i></div>
 </div>
 
 <script>
-    // Clock
-    function updateClock() {
-        const now = new Date();
-        const hours = now.getHours().toString().padStart(2, '0');
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        document.getElementById('clock').textContent = hours + ':' + minutes;
-    }
-    updateClock();
-    setInterval(updateClock, 1000);
-    
     // Video
     const heroVideo = document.getElementById('heroVideo');
     if (heroVideo) {
@@ -1081,14 +1026,10 @@
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         document.getElementById('progressBar').style.width = (winScroll / height * 100) + '%';
         
-        // Hide status bar on scroll
-        const status = document.getElementById('iosStatus');
         const indicator = document.getElementById('homeIndicator');
         if (winScroll > 50) {
-            status.classList.add('hidden');
             indicator.classList.add('hidden');
         } else {
-            status.classList.remove('hidden');
             indicator.classList.remove('hidden');
         }
     });
@@ -1149,7 +1090,7 @@
         window.open('https://yandex.ru/maps/-/CPGNRCmK', '_blank');
     });
     
-    // Working Hours
+    // Working Hours Status
     const now = new Date();
     const currentDay = now.getDay();
     const currentHour = now.getHours();
@@ -1188,7 +1129,7 @@
         revealObserver.observe(el);
     });
     
-    // Haptic feedback simulation (visual)
+    // Haptic feedback simulation
     document.querySelectorAll('.ios-btn, .ios-gallery-item, .ios-social-btn').forEach(el => {
         el.addEventListener('touchstart', () => {
             el.style.transform = 'scale(0.96)';
